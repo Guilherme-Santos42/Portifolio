@@ -1,0 +1,122 @@
+/* Variáveis globais */
+:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --accent-color: #007bff;
+}
+
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Cabeçalho com Parallax */
+.parallax {
+    background-image: url('https://via.placeholder.com/1920x1080');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+}
+
+/* Navegação */
+nav {
+    background: var(--bg-color);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Seções */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.content, .projects-container, .skills-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-card, .project-card {
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.skill-card img, .project-card img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+/* Contato */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-container img {
+    width: 50px;
+    transition: transform 0.3s;
+}
+
+.contact-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1e1e1e;
+}
