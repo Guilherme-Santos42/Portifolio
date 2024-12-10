@@ -15,7 +15,7 @@ body {
 
 /* Cabeçalho com Parallax */
 .parallax {
-    background-image: url('https://via.placeholder.com/1920x1080');
+    background-image: url('https://unsplash.com/pt-br/fotografias/people-riding-on-boat-on-body-of-water-during-night-time-iuJZZqlbxks'); 
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
