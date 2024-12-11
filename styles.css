@@ -93,6 +93,9 @@ section {
     width: 200px;
 }
 
+.novo{
+    border-radius: 8px;
+}
 .skill-card img, .project-card img {
     width: 100px;
     margin-bottom: 1rem;
