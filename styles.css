@@ -94,13 +94,19 @@ section {
     width: 250px;
 }
 
-  .imagem {
-      width: 150px; /* Defina o tamanho da imagem */
-      height: 150px; /* Mantenha as proporções de largura e altura iguais para criar um círculo */
-      border-radius: 50%; /* Arredonda a imagem */
-      margin-right: 20px; /* Espaçamento entre a imagem e o texto */
-      object-fit: cover; /* Faz a imagem se ajustar dentro do círculo sem distorcer */
-    }
+.imagem {
+    width: 150px; /* Tamanho da imagem */
+    height: 150px; /* Mantém as proporções de largura e altura iguais para criar um círculo */
+    border-radius: 50%; /* Arredonda a imagem */
+    object-fit: cover; /* Ajusta a imagem sem distorção */
+    margin-right: 2rem; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Ajustando o texto para que fique ao lado da imagem */
+#about h2 {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
 
 .skill-card img, .project-card img {
     width: 100px;
