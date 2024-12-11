@@ -81,7 +81,7 @@ section {
 .content{
     display: flex;
     gap: 1rem;
-    justify-content: left;
+    justify-content: center;
     flex-wrap: nowrap;
 }
 
