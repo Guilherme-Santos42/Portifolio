@@ -83,6 +83,7 @@ section {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    align-itens: center;
 }
 
 .skill-card, .project-card {
