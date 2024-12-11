@@ -99,7 +99,7 @@ section {
     height: 300px;                /* Mantém as proporções de largura e altura iguais para criar um círculo */
     border-radius: 50%;           /* Arredonda a imagem */
     object-fit: cover;   /* Faz a imagem se ajustar sem distorção */
-    justify-content:space-around;
+    display:flex;
 }
 
 #about h3 {
