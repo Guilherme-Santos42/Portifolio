@@ -78,12 +78,21 @@ section {
     text-align: center;
 }
 
-.content, .projects-container, .skills-container {
+.content{
     display: flex;
     gap: 1rem;
     justify-content: left;
     flex-wrap: wrap;
     align-itens: left;
+
+}
+
+.projects-container, .skills-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: left;
+    flex-wrap: wrap;
+    align-itens: center;
 }
 
 .skill-card, .project-card {
