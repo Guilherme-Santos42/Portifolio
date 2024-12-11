@@ -48,16 +48,20 @@ h1, h2, h3 {
     color: white;
 }
 
+.overlay h1, .overlay p {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase; /* Opcional: transforma o texto para letras maiúsculas */
+    letter-spacing: 2px; /* Ajusta o espaçamento entre as letras */
+}
+
 .overlay h1 {
-    font-size: 4rem;
-    margin: 0;
+    font-size: 4.5rem; /* Ajuste o tamanho conforme necessário */
 }
 
 .overlay p {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    opacity: 0.8;
+    font-size: 1.8rem;
 }
+
 
 /* Navegação */
 nav {
