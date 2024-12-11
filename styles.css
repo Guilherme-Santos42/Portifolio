@@ -3,28 +3,42 @@
     --bg-color: #121212;
     --text-color: #e0e0e0;
     --accent-color: #007bff;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0, 0, 0, 0.2);
+    --font-family: 'Roboto', Arial, sans-serif;
 }
 
 /* Estilos gerais */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     background-color: var(--bg-color);
     color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
 }
 
 /* Cabeçalho com Parallax */
 .parallax {
-    background-image: url('https://github.com/user-attachments/assets/5c96e4f4-7933-4b29-a4fc-fde4e2b0dfa4'); 
+    background-image: url('https://github.com/user-attachments/assets/5c96e4f4-7933-4b29-a4fc-fde4e2b0dfa4');
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .overlay {
     background: rgba(0, 0, 0, 0.6);
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -35,12 +49,14 @@ body {
 }
 
 .overlay h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0;
 }
 
 .overlay p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    opacity: 0.8;
 }
 
 /* Navegação */
@@ -49,7 +65,8 @@ nav {
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
+    box-shadow: 0 2px 5px var(--card-shadow);
     border-bottom: 1px solid #333;
 }
 
@@ -65,64 +82,77 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--text-color);
-    transition: color 0.3s;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
 }
 
 nav a:hover {
     color: var(--accent-color);
+    transform: scale(1.1);
 }
 
 /* Seções */
 section {
     padding: 4rem 2rem;
-    text-align: justify;
+    text-align: center;
+    background-color: var(--bg-color);
 }
 
-.content{
+#about .content {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: nowrap;
-}
-
-.projects-container,.skills-container {
-    display: flex;
-    gap: 1rem;
     flex-wrap: wrap;
-    align-itens: center;
-}
-
-.skill-card, .project-card {
-    background: #1e1e1e;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 250px;
-    display: flex;
-    
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .imagem {
-    width: 300px;                 /* Define o tamanho da imagem */
-    height: 300px;                /* Mantém as proporções de largura e altura iguais para criar um círculo */
-    border-radius: 50%;           /* Arredonda a imagem */
-    object-fit: cover;   /* Faz a imagem se ajustar sem distorção */
-   
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    transition: transform 0.3s;
 }
 
-#about h3 {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin: 0;
+.imagem:hover {
+    transform: scale(1.05);
 }
-#about p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 10px 0;
+
+#about h3, #about p {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+/* Cartões */
+.skill-card, .project-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--card-shadow);
 }
 
 .skill-card img, .project-card img {
-    width: 100px;
+    width: 80px;
     margin-bottom: 1rem;
+}
+
+.projects-container, .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
 /* Contato */
@@ -130,6 +160,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .contact-container img {
@@ -138,12 +169,15 @@ section {
 }
 
 .contact-container img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 /* Rodapé */
 footer {
     text-align: center;
     padding: 1rem;
-    background: #1e1e1e;
+    background: var(--card-bg);
+    color: #aaa;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
 }
