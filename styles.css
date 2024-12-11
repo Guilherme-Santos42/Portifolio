@@ -81,7 +81,7 @@ section {
 .content, .projects-container, .skills-container {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     align-itens: left;
 }
