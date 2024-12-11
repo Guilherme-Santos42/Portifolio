@@ -93,9 +93,14 @@ section {
     width: 200px;
 }
 
-.novo{
-    border-radius: 50%;
-}
+  .imagem {
+      width: 150px; /* Defina o tamanho da imagem */
+      height: 150px; /* Mantenha as proporções de largura e altura iguais para criar um círculo */
+      border-radius: 50%; /* Arredonda a imagem */
+      margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+      object-fit: cover; /* Faz a imagem se ajustar dentro do círculo sem distorcer */
+    }
+
 .skill-card img, .project-card img {
     width: 100px;
     margin-bottom: 1rem;
