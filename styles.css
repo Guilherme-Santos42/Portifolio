@@ -84,12 +84,7 @@ section {
     justify-content: center;
     flex-wrap: wrap;
 }
-.skills-container1 {
-    display: flex;
-    gap: 1rem;
-    justify-content: left;
-    flex-wrap: wrap;
-}
+
 .skill-card, .project-card {
     background: #1e1e1e;
     padding: 1rem;
