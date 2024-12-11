@@ -82,7 +82,7 @@ section {
     display: flex;
     gap: 1rem;
     justify-content: left;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .projects-container,.skills-container {
