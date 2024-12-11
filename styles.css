@@ -83,8 +83,6 @@ section {
     gap: 1rem;
     justify-content: left;
     flex-wrap: wrap;
-    align-itens: left;
-
 }
 
 .projects-container,.skills-container {
@@ -108,7 +106,7 @@ section {
     height: 300px;                /* Mantém as proporções de largura e altura iguais para criar um círculo */
     border-radius: 50%;           /* Arredonda a imagem */
     object-fit: cover;   /* Faz a imagem se ajustar sem distorção */
-    display:flex;
+   
 }
 
 #about h3 {
