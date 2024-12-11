@@ -88,7 +88,6 @@ section {
 .projects-container,.skills-container {
     display: flex;
     gap: 1rem;
-    justify-content: center;
     flex-wrap: wrap;
     align-itens: center;
 }
