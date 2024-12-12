@@ -130,7 +130,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem; /* Reduz o espaço entre imagem e texto */
+    gap: 2rem; /* Reduz o espaço entre imagem e texto */
     margin: 2rem 0;
 }
 
@@ -157,7 +157,7 @@ section {
     flex: 2;
     color: var(--text-color);
     max-width: 600px; /* Limita a largura máxima do texto */
-    margin-left:3rem;
+    
 }
 
 .text-wrapper h3 {
