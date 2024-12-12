@@ -111,6 +111,20 @@ section {
     gap: 2rem;
 }
 
+
+#about .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.image-wrapper {
+    flex: 1;
+    text-align: center;
+}
+
 .imagem {
     width: 250px;
     height: 250px;
@@ -118,6 +132,29 @@ section {
     object-fit: cover;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s;
+}
+
+.imagem:hover {
+    transform: scale(1.05);
+}
+
+.text-wrapper {
+    flex: 2;
+    color: var(--text-color);
+}
+
+.text-wrapper h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.text-wrapper p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd;
+    max-width: 600px;
 }
 
 .imagem:hover {
