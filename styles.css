@@ -8,7 +8,7 @@
     --font-family: 'Roboto', Arial, sans-serif;
 }
 
-/* Estilos gerais olá mundo */
+/* Estilos gerais */
 body {
     margin: 0;
     font-family: var(--font-family);
@@ -36,6 +36,18 @@ h1, h2, h3 {
     position: relative;
 }
 
+/* Animações Elementos que ainda não estão visíveis */
+.fade-in, .slide-up {
+    opacity: 0;
+    transform: translateY(20px); /* Efeito de deslocamento para slide-up */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Quando o elemento entra na tela */
+.fade-in.visible, .slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .overlay {
     background: rgba(0, 0, 0, 0.6);
