@@ -147,6 +147,7 @@ section {
     object-fit: cover;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s;
+    margin-right: 2rem;
 }
 
 .imagem:hover {
