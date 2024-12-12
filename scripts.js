@@ -1,8 +1,7 @@
-// Adicione funcionalidades ou animações interativas, se necessário.
-console.log('Portfólio carregado com sucesso!');
-
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".fade-in, .slide-up");
+
+    // Configurar o IntersectionObserver
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
@@ -11,8 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         },
-        { threshold: 0.1 }
+        { threshold: 0.2 } // Detecta o elemento quando 20% dele está visível
     );
 
+    // Observar cada elemento animado
     elements.forEach((el) => observer.observe(el));
 });
