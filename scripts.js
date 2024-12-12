@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".fade-in, .slide-up");
 
-    // Configurar o IntersectionObserver
+    // Configura o observer para monitorar os elementos
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("visible");
+                    observer.unobserve(entry.target); // Para evitar reaplicação da animação
                 }
             });
         },
-        { threshold: 0.2 } // Detecta o elemento quando 20% dele está visível
+        { threshold: 0.1 } // Detecta quando pelo menos 10% do elemento está visível
     );
 
-    // Observar cada elemento animado
     elements.forEach((el) => observer.observe(el));
 });
