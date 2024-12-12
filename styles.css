@@ -141,7 +141,7 @@ section {
 }
 
 .imagem {
-    width: 100%;
+    width: 120%;
     height: auto;
     border-radius: 50%;
     object-fit: cover;
