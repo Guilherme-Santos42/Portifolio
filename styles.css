@@ -130,7 +130,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem; /* Reduz o espaço entre imagem e texto */
+    gap: 4rem; /* Reduz o espaço entre imagem e texto */
     margin: 2rem 0;
 }
 
