@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".fade-in, .slide-up");
 
-    // Configura o observer para monitorar os elementos
+    //Configura o observer para monitorar os elementos
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
