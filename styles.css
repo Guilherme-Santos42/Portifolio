@@ -141,8 +141,9 @@ section {
 }
 
 .imagem {
-    width: 150%;
-    height: auto;
+    
+    width: 300px;  /* Ajuste para o tamanho desejado */
+    height: 300px; /* Mantém a proporção */
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 8px var(--card-shadow);
