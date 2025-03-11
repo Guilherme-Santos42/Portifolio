@@ -205,7 +205,7 @@ section {
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    width: 100%;
+    width: 300px;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -221,13 +221,9 @@ section {
 }
 
 .project-card img {
-    
+    width: 300px;
     margin-bottom: 1rem;
-    width: 70%; /* Faz a imagem ocupar toda a largura do card */
-    max-width: 300px; /* Define um tamanho máximo */
-    height: auto; /* Mantém a proporção */
-    border-radius: 10px; /* Opcional: arredonda as bordas */
-    object-fit: cover; /* Mantém o enquadramento */
+    
 }
 
 .projects-container, .skills-container {
