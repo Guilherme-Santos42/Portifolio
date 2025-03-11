@@ -205,8 +205,14 @@ section {
 }
 
 .skill-card img, .project-card img {
-    width: 80px;
-    margin-bottom: 1rem;
+    .project-card img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do card */
+    max-width: 700px; /* Define um tamanho máximo */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px; /* Opcional: arredonda as bordas */
+    object-fit: cover; /* Mantém o enquadramento */
+}
+
 }
 
 .projects-container, .skills-container {
