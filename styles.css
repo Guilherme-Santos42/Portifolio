@@ -141,9 +141,8 @@ section {
 }
 
 .imagem {
-    
-    width: 300px;  /* Ajuste para o tamanho desejado */
-    height: 300px; /* Mantém a proporção */
+    width: 120%;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 8px var(--card-shadow);
@@ -189,27 +188,12 @@ section {
 }
 
 /* Cartões */
-.skill-card {
+.skill-card, .project-card {
     background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
     width: 250px;
-    
-    box-shadow: 0 4px 8px var(--card-shadow);
-    transition: transform 0.3s, box-shadow 0.3s;
-    
-    
-}
-
-.project-card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    width: 100%;
-    max-width: 800px; /* Define um limite */
-    
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -219,22 +203,9 @@ section {
     box-shadow: 0 8px 16px var(--card-shadow);
 }
 
-.skill-card img{
-
+.skill-card img, .project-card img {
     width: 80px;
     margin-bottom: 1rem;
-}
-
-    
-
-.project-card img {
-    width: 100%; /* Faz a imagem ocupar toda a largura do card */
-    max-width: 700px; /* Define um tamanho máximo */
-    height: auto; /* Mantém a proporção */
-    border-radius: 10px; /* Opcional: arredonda as bordas */
-    object-fit: cover; /* Mantém o enquadramento */
-}
-
 }
 
 .projects-container, .skills-container {
