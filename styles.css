@@ -188,12 +188,24 @@ section {
 }
 
 /* Cartões */
-.skill-card, .project-card {
-    background: var(--card-bg);
+.skill-card{
+ background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
     width: 250px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
 }
