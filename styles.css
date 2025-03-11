@@ -189,7 +189,7 @@ section {
 }
 
 /* Cartões */
-.skill-card{
+.skill-card {
     background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
