@@ -223,8 +223,8 @@ section {
 .project-card img {
     
     margin-bottom: 1rem;
-    width: 100%; /* Faz a imagem ocupar toda a largura do card */
-    max-width: 700px; /* Define um tamanho máximo */
+    width: 70%; /* Faz a imagem ocupar toda a largura do card */
+    max-width: 300px; /* Define um tamanho máximo */
     height: auto; /* Mantém a proporção */
     border-radius: 10px; /* Opcional: arredonda as bordas */
     object-fit: cover; /* Mantém o enquadramento */
