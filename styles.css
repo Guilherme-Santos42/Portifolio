@@ -215,15 +215,15 @@ section {
     box-shadow: 0 8px 16px var(--card-shadow);
 }
 
-.skill-card img{
+.skill-card img {
     width: 80px;
     margin-bottom: 1rem;
 }
 
 .project-card img {
-    width: 80px;
+    
     margin-bottom: 1rem;
-     width: 100%; /* Faz a imagem ocupar toda a largura do card */
+    width: 100%; /* Faz a imagem ocupar toda a largura do card */
     max-width: 700px; /* Define um tamanho máximo */
     height: auto; /* Mantém a proporção */
     border-radius: 10px; /* Opcional: arredonda as bordas */
