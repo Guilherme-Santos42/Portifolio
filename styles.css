@@ -194,7 +194,9 @@ section {
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    width: 250px;
+    width: 100%;
+    max-width: 800px; /* Define um limite */
+    
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
 }
