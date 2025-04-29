@@ -1,20 +1,22 @@
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      } else {
-        entry.target.classList.remove("visible"); // para que a animação se repita
-      }
-    });
-  }, {
-    threshold: 0.1 // ativa quando 10% do elemento estiver visível
-  });
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in, .slide-up");
 
-  // Observar todos os elementos animáveis
-  document.querySelectorAll('.fade-in, .slide-up').forEach(el => {
-    observer.observe(el);
-  });
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                const el = entry.target;
+                if (entry.isIntersecting) {
+                    // Reaplica a animação forçando reflow
+                    el.classList.remove("visible");
+                    void el.offsetWidth; // Trigger reflow
+                    el.classList.add("visible");
+                } else {
+                    el.classList.remove("visible");
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
 });
-</script>
