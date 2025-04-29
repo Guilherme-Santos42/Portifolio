@@ -1,18 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".fade-in, .slide-up");
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible"); // para que a animação se repita
+      }
+    });
+  }, {
+    threshold: 0.1 // ativa quando 10% do elemento estiver visível
+  });
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                } else {
-                    entry.target.classList.remove("visible"); // ← Isso permite o efeito reverso ao sair da tela
-                }
-            });
-        },
-        { threshold: 0.1 }
-    );
-
-    elements.forEach((el) => observer.observe(el));
+  // Observar todos os elementos animáveis
+  document.querySelectorAll('.fade-in, .slide-up').forEach(el => {
+    observer.observe(el);
+  });
 });
+</script>
