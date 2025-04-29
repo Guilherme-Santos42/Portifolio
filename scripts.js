@@ -1,29 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".fade-in, .slide-up");
 
+    //Configura o observer para monitorar os elementos
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
+                    observer.unobserve(entry.target); // Para evitar reaplicação da animação
                 }
             });
         },
-        { threshold: 0.1 }
+        { threshold: 0.1 } // Detecta quando pelo menos 10% do elemento está visível
     );
 
     elements.forEach((el) => observer.observe(el));
-
-    // Texto estilo hacker (digitando)
-    const hackerText = "Transformando Segurança em Soluções Digitais";
-    let i = 0;
-    const typing = () => {
-        if (i < hackerText.length) {
-            document.getElementById("hacker-text").innerHTML += hackerText.charAt(i);
-            i++;
-            setTimeout(typing, 80);
-        }
-    };
-    typing();
 });
