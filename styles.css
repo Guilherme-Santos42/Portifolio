@@ -17,10 +17,15 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3 {
-    font-family: 'Poppins', 'Bebas Neue', sans-serif;
+h1,h3 {
+    font-family: 'Poppins', 'Bebas Neue', sans-serif, 'Lexend';
     margin-bottom: 1rem;
 }
+h2 {
+    font-family: 'Lexend';
+    margin-bottom: 1rem;
+}
+ 
 
 /* Cabeçalho com Parallax */
 .parallax, .parallax1 {
