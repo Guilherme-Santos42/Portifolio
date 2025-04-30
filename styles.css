@@ -36,6 +36,19 @@ h1, h2, h3 {
     position: relative;
 }
 
+
+.parallax1 {
+    background-image: url('https://github.com/user-attachments/assets/8f57127c-7e94-4670-82a1-4709300f5224');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 /* Animações Elementos que ainda não estão visíveis */
 .fade-in, .slide-up {
     opacity: 0;
