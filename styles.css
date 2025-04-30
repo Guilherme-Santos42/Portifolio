@@ -217,7 +217,7 @@ section {
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    width: 200px;
+    width: 150px;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
 
@@ -229,7 +229,7 @@ section {
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    width: 300px;
+    width: 220px;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
 }
