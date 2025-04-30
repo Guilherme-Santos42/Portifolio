@@ -284,8 +284,90 @@ footer {
     border-top: 1px solid #333;
 }
 
+/* --- Responsividade para telas menores que 600px --- */
 @media (max-width: 600px) {
-  p {
-    font-size: 16px;
-  }
+
+    /* Textos principais */
+    h1 {
+        font-size: 2.5rem; /* Reduz o tamanho do título */
+    }
+
+    h2, h3 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem; /* Parágrafos um pouco menores */
+    }
+
+    /* Parallax ajusta altura */
+    .parallax, .parallax1 {
+        height: 60vh; /* Menor altura para caber melhor */
+        background-attachment: scroll; /* Em mobile 'fixed' dá bug, melhor scroll */
+    }
+
+    /* Navegação */
+    nav ul {
+        flex-direction: column; /* Coloca o menu empilhado */
+        gap: 1rem; /* Menor espaço */
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    /* Sobre - Seção About */
+    #about .about-container {
+        flex-direction: column; /* Empilha a imagem e o texto */
+        gap: 2rem;
+    }
+
+    .image-wrapper {
+        max-width: 200px; /* Imagem menor */
+    }
+
+    .imagem {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .text-wrapper {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .text-wrapper h3 {
+        font-size: 2rem;
+    }
+
+    .text-wrapper p {
+        font-size: 1rem;
+    }
+
+    /* Cartões (skills e projetos) */
+    .skill-card, .project-card {
+        width: 100%;
+        max-width: 300px; /* Limita para não ficar estourando */
+    }
+
+    .project-card img {
+        width: 100%;
+    }
+
+    /* Contato */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-container img {
+        width: 40px;
+    }
+
+    /* Rodapé */
+    footer {
+        font-size: 0.8rem;
+    }
+
 }
+
