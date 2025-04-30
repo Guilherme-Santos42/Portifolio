@@ -18,14 +18,28 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Poppins', bebas-neue;
+    font-family: 'Poppins', 'Bebas Neue', sans-serif;
     margin-bottom: 1rem;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
 /* Cabeçalho com Parallax */
-.parallax {
-    background-image: url('https://github.com/user-attachments/assets/8f57127c-7e94-4670-82a1-4709300f5224');
-    height: 100vh;
+.parallax, .parallax1 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,36 +48,22 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     position: relative;
+    width: 100%;
+}
+
+.parallax {
+    background-image: url('https://github.com/user-attachments/assets/8f57127c-7e94-4670-82a1-4709300f5224');
+    height: 100vh;
 }
 
 .parallax1 {
     background-image: url('https://github.com/user-attachments/assets/972ce2dd-f82d-40a9-bf3e-75444952a079');
     height: 80vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
     padding-top: 4rem;
 }
 
-/* Animações Elementos que ainda não estão visíveis */
-.fade-in, .slide-up {
-    opacity: 0;
-    transform: translateY(20px); /* Efeito de deslocamento para slide-up */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* Quando o elemento entra na tela */
-.fade-in.visible, .slide-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.overlay {
+/* Overlay */
+.overlay, .overlay1 {
     background: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
@@ -71,33 +71,27 @@ h1, h2, h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: center;
     color: white;
+    padding: 2rem;
 }
 
 .overlay1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Alinha no topo */
-    align-items: center;         /* Centraliza horizontalmente */
-    text-align: center;
-    color: white;
-    padding-top: 2rem;           /* Espaço superior opcional */
+    justify-content: flex-start;
     background: none;
-}
-
-.overlay h1, .overlay p {
-    font-family: 'Bebas Neue', sans-serif;
-    text-transform: uppercase; /* Opcional: transforma o texto para letras maiúsculas */
-    letter-spacing: 2px; /* Ajusta o espaçamento entre as letras */
+    padding-top: 4rem;
 }
 
 .overlay h1 {
-    font-size: 4.5rem; /* Ajuste o tamanho conforme necessário */
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .overlay p {
     font-size: 1.8rem;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 /* Navegação */
@@ -138,39 +132,29 @@ nav a:hover {
 section {
     padding: 4rem 2rem;
     text-align: center;
-    background-color: var(--bg-color);
-}
-
-#about .content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
 }
 
 #about .about-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 4rem; /* Reduz o espaço entre imagem e texto */
+    gap: 4rem;
     margin: 2rem 0;
 }
 
 .image-wrapper {
     flex: 1;
-    text-align: center;
-    max-width: 250px; /* Limita a largura máxima da imagem */
+    max-width: 250px;
 }
 
 .imagem {
-    width: 120%;
+    width: 100%;
     height: auto;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s;
-    margin-right: 2rem;
 }
 
 .imagem:hover {
@@ -179,15 +163,15 @@ section {
 
 .text-wrapper {
     flex: 2;
-    color: var(--text-color);
-    max-width: 600px; /* Limita a largura máxima do texto */
+    max-width: 600px;
+    text-align: left;
 }
 
 .text-wrapper h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     color: var(--accent-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .text-wrapper p {
@@ -196,36 +180,22 @@ section {
     color: #ddd;
 }
 
-.imagem:hover {
-    transform: scale(1.05);
-}
-
-#about h3, #about p {
-    text-align: left;
-    max-width: 700px;
-    margin: 0 auto;
-    color: #ddd;
-}
-
 /* Cartões */
-.skill-card {
+.skill-card, .project-card {
     background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    width: 250px;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card {
+    width: 250px;
 }
 
 .project-card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
     width: 300px;
-    box-shadow: 0 4px 8px var(--card-shadow);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .skill-card:hover, .project-card:hover {
@@ -233,16 +203,13 @@ section {
     box-shadow: 0 8px 16px var(--card-shadow);
 }
 
-.skill-card img {
-    width: 80px;
+.skill-card img, .project-card img {
+    width: 80%;
     margin-bottom: 1rem;
+    object-fit: cover;
 }
 
-.project-card img {
-    width: 300px;
-    margin-bottom: 1rem;
-}
-
+/* Containers de Skills e Projetos */
 .projects-container, .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -277,63 +244,59 @@ footer {
     border-top: 1px solid #333;
 }
 
-/* --- Responsividade para telas menores que 600px --- */
-@media (max-width: 600px) {
-
-    /* Textos principais */
+/* Responsividade */
+@media (max-width: 768px) {
     h1 {
-        font-size: 1rem; /* Reduz o tamanho do título */
+        font-size: 2.5rem;
     }
 
-    h2, h3 {
-        font-size: 1rem;
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
     }
 
     p {
-        font-size: 1rem; /* Parágrafos um pouco menores */
+        font-size: 1rem;
     }
-     #about .about-container {
+
+    .about-container {
         flex-direction: column;
         text-align: center;
     }
+
+    .text-wrapper {
+        text-align: center;
+    }
+
+    .imagem {
+        width: 70%;
+    }
+
+    .skills-container, .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card, .project-card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .parallax, .parallax1 {
+        height: auto;
+        background-attachment: scroll;
+        padding: 4rem 2rem;
+    }
+
+    .overlay, .overlay1 {
+        padding: 2rem;
+    }
+
     .contact-container {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
-    }
-    .project-card img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-}
-
-    /* Parallax ajusta altura */
-    .parallax{
-        height: 70vh; /* Menor altura para caber melhor */
-        background-attachment: scroll; /* Em mobile 'fixed' dá bug, melhor scroll */
-    }
-    
-    .parallax1 {
-        min-height: auto; /* Deixa o conteúdo definir a altura */
-        padding: 4rem 1rem; /* Espaço interno confortável */
-        background-attachment: scroll; /* Já está certo no seu */
-    }
-
-    /* Cartões (skills e projetos) */
-    .skills-container {
-        flex-direction: column; /* Empilha os cards verticalmente */
-        align-items: center; /* Centraliza os cards */
-    }
-
-    .skill-card {
-        width: 90%;  /* Faz os cards ocuparem 90% da largura da tela */
-        max-width: 300px; /* Limita a largura dos cards */
-        margin-bottom: 1rem; /* Adiciona espaço entre os cards */
-    }
-
-    /* Ajuste do parallax para dispositivos móveis */
-    .overlay {
-        padding: 1rem;
-        background: rgba(0, 0, 0, 0.6);
     }
 }
