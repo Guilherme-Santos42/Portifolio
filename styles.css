@@ -1,4 +1,4 @@
-/*Variáveis globais */
+/* Variáveis globais */
 :root {
     --bg-color: #121212;
     --text-color: #e0e0e0;
@@ -36,10 +36,9 @@ h1, h2, h3 {
     position: relative;
 }
 
-
 .parallax1 {
     background-image: url('https://github.com/user-attachments/assets/972ce2dd-f82d-40a9-bf3e-75444952a079');
-    min-height: 100vh;
+    height: 80vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,6 +49,7 @@ h1, h2, h3 {
     position: relative;
     padding-top: 4rem;
 }
+
 /* Animações Elementos que ainda não estão visíveis */
 .fade-in, .slide-up {
     opacity: 0;
@@ -100,7 +100,6 @@ h1, h2, h3 {
     font-size: 1.8rem;
 }
 
-
 /* Navegação */
 nav {
     background: var(--bg-color);
@@ -150,7 +149,6 @@ section {
     gap: 1rem;
 }
 
-
 #about .about-container {
     display: flex;
     align-items: center;
@@ -183,7 +181,6 @@ section {
     flex: 2;
     color: var(--text-color);
     max-width: 600px; /* Limita a largura máxima do texto */
-    
 }
 
 .text-wrapper h3 {
@@ -191,7 +188,6 @@ section {
     font-size: 2.5rem;
     color: var(--accent-color);
     margin-bottom: 2rem;
-   
 }
 
 .text-wrapper p {
@@ -199,7 +195,6 @@ section {
     line-height: 1.8;
     color: #ddd;
 }
-
 
 .imagem:hover {
     transform: scale(1.05);
@@ -213,16 +208,14 @@ section {
 }
 
 /* Cartões */
-.skill-card{
- background: var(--card-bg);
+.skill-card {
+    background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
     width: 250px;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
-
-
 }
 
 .project-card {
@@ -248,7 +241,6 @@ section {
 .project-card img {
     width: 300px;
     margin-bottom: 1rem;
-    
 }
 
 .projects-container, .skills-container {
@@ -307,86 +299,27 @@ footer {
         background-attachment: scroll; /* Em mobile 'fixed' dá bug, melhor scroll */
     }
     
-.parallax1 {
-    min-height: auto; /* deixa o conteúdo definir a altura */
-    padding: 4rem 1rem; /* espaço interno confortável */
-    background-attachment: scroll; /* já está certo no seu */
-}
-    /* Navegação */
-    nav ul {
-        flex-direction: column; /* Coloca o menu empilhado */
-        gap: 1rem; /* Menor espaço */
+    .parallax1 {
+        min-height: auto; /* Deixa o conteúdo definir a altura */
+        padding: 4rem 1rem; /* Espaço interno confortável */
+        background-attachment: scroll; /* Já está certo no seu */
     }
 
-    nav a {
-        font-size: 1rem;
-    }
-
-    /* Sobre - Seção About */
-    #about .about-container {
-        flex-direction: column; /* Empilha a imagem e o texto */
-        gap: 2rem;
-    }
-
-    .image-wrapper {
-        max-width: 200px; /* Imagem menor */
-    }
-
-    .imagem {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .text-wrapper {
-        max-width: 90%;
-        text-align: center;
-    }
-
-    .text-wrapper h3 {
-        font-size: 2rem;
-    }
-
-    .text-wrapper p {
-        font-size: 1rem;
-    }
-    .overlay {
-    padding: 1rem; /* Adiciona espaço interno */
-    max-width: 90%; /* Limita o conteúdo para caber na tela */
-}
-
-.overlay h1 {
-    font-size: 2rem; /* Reduz tamanho do título para mobile */
-    text-align: center; /* Centraliza o título */
-}
-
-.overlay p {
-    font-size: 1rem; /* Fonte menor para parágrafo */
-    text-align: center;
-}
     /* Cartões (skills e projetos) */
-    .skill-card, .project-card {
-        width: 90%;
-        max-width: 300px; /* Limita para não ficar estourando */
+    .skills-container {
+        flex-direction: column; /* Empilha os cards verticalmente */
+        align-items: center; /* Centraliza os cards */
     }
 
-    .project-card img {
-        width: 100%;
-        height: auto;
+    .skill-card {
+        width: 90%;  /* Faz os cards ocuparem 90% da largura da tela */
+        max-width: 300px; /* Limita a largura dos cards */
+        margin-bottom: 1rem; /* Adiciona espaço entre os cards */
     }
 
-    /* Contato */
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
+    /* Ajuste do parallax para dispositivos móveis */
+    .overlay {
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.6);
     }
-
-    .contact-container img {
-        width: 40px;
-    }
-
-    /* Rodapé */
-    footer {
-        font-size: 0.8rem;
-    }
-
 }
