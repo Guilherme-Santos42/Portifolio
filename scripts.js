@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".fade-in, .slide-up");
+const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
