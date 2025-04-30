@@ -17,8 +17,13 @@ body {
     line-height: 1.6;
 }
 
-h1,h3 {
+h1{
     font-family: 'Poppins', 'Bebas Neue', sans-serif, 'Lexend';
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-family: 'Lexend';
     margin-bottom: 1rem;
 }
 h2 {
