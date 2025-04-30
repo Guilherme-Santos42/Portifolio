@@ -76,9 +76,6 @@ h1, h2, h3 {
 }
 
 .overlay1 {
-    background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Alinha no topo */
