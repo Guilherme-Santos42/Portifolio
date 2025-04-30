@@ -292,6 +292,20 @@ footer {
     p {
         font-size: 1rem; /* Parágrafos um pouco menores */
     }
+     #about .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .project-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
 
     /* Parallax ajusta altura */
     .parallax{
