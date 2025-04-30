@@ -45,9 +45,10 @@ h1, h2, h3 {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
+    padding-top: 4rem;
 }
 /* Animações Elementos que ainda não estão visíveis */
 .fade-in, .slide-up {
