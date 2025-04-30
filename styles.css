@@ -83,7 +83,7 @@ h1, h2, h3 {
     text-align: center;
     color: white;
     padding-top: 2rem;           /* Espaço superior opcional */
-    box-shadow: none;
+    background: none;
 }
 
 .overlay h1, .overlay p {
