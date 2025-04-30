@@ -234,7 +234,17 @@ section {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.skill-card:hover, .project-card:hover {
+.x-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover, .project-card:hover .x-card:hover{
     transform: translateY(-5px);
     box-shadow: 0 8px 16px var(--card-shadow);
 }
@@ -249,7 +259,10 @@ section {
     margin-bottom: 1rem;
     
 }
-
+.x-card img{
+     width: 300px;
+    margin-bottom: 1rem;
+}
 .projects-container, .skills-container {
     display: flex;
     flex-wrap: wrap;
