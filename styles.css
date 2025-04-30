@@ -307,11 +307,11 @@ footer {
         background-attachment: scroll; /* Em mobile 'fixed' dá bug, melhor scroll */
     }
     
-    .parallax1 {
-        height: 90vh; /* Menor altura para caber melhor */
-        background-attachment: scroll; /* Em mobile 'fixed' dá bug, melhor scroll */
-    }
-
+.parallax1 {
+    min-height: auto; /* deixa o conteúdo definir a altura */
+    padding: 4rem 1rem; /* espaço interno confortável */
+    background-attachment: scroll; /* já está certo no seu */
+}
     /* Navegação */
     nav ul {
         flex-direction: column; /* Coloca o menu empilhado */
