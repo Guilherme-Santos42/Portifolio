@@ -14,17 +14,18 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
-    font-family: 'Poppins', bebas-neue;
+    font-family: 'Bebas Neue', sans-serif;
     margin-bottom: 1rem;
 }
 
 /* Cabeçalho com Parallax */
 .parallax {
     background-image: url('https://github.com/user-attachments/assets/8f57127c-7e94-4670-82a1-4709300f5224');
-    height: 100vh;
+    min-height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,11 +35,10 @@ h1, h2, h3 {
     justify-content: center;
     position: relative;
 }
-
 
 .parallax1 {
     background-image: url('https://github.com/user-attachments/assets/972ce2dd-f82d-40a9-bf3e-75444952a079');
-    height: 80vh;
+    min-height: 80vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,16 +47,16 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-top: 4rem;
+    padding: 4rem 1rem 1rem;
 }
-/* Animações Elementos que ainda não estão visíveis */
+
+/* Animações */
 .fade-in, .slide-up {
     opacity: 0;
-    transform: translateY(20px); /* Efeito de deslocamento para slide-up */
+    transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Quando o elemento entra na tela */
 .fade-in.visible, .slide-up.visible {
     opacity: 1;
     transform: translateY(0);
@@ -70,40 +70,43 @@ h1, h2, h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: center;
     color: white;
+    padding: 1rem;
 }
 
 .overlay1 {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinha no topo */
-    align-items: center;         /* Centraliza horizontalmente */
+    justify-content: flex-start;
+    align-items: center;
     text-align: center;
     color: white;
-    padding-top: 2rem;           /* Espaço superior opcional */
+    padding-top: 2rem;
     background: none;
+    width: 100%;
 }
 
 .overlay h1, .overlay p {
     font-family: 'Bebas Neue', sans-serif;
-    text-transform: uppercase; /* Opcional: transforma o texto para letras maiúsculas */
-    letter-spacing: 2px; /* Ajusta o espaçamento entre as letras */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0.5rem 0;
 }
 
 .overlay h1 {
-    font-size: 4.5rem; /* Ajuste o tamanho conforme necessário */
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    line-height: 1.2;
 }
 
 .overlay p {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
 }
-
 
 /* Navegação */
 nav {
     background: var(--bg-color);
-    padding: 1rem 2rem;
+    padding: 1rem;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -115,7 +118,8 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
     margin: 0;
     padding: 0;
 }
@@ -123,9 +127,10 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-weight: bold;
     transition: color 0.3s, transform 0.2s;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -135,7 +140,7 @@ nav a:hover {
 
 /* Seções */
 section {
-    padding: 4rem 2rem;
+    padding: 3rem 1rem;
     text-align: center;
     background-color: var(--bg-color);
 }
@@ -148,29 +153,32 @@ section {
     gap: 1rem;
 }
 
-
 #about .about-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4rem; /* Reduz o espaço entre imagem e texto */
+    gap: 2rem;
     margin: 2rem 0;
+    width: 100%;
 }
 
 .image-wrapper {
     flex: 1;
     text-align: center;
-    max-width: 250px; /* Limita a largura máxima da imagem */
+    max-width: 250px;
+    width: 100%;
 }
 
 .imagem {
-    width: 120%;
+    width: 100%;
+    max-width: 250px;
     height: auto;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s;
-    margin-right: 2rem;
+    margin: 0;
 }
 
 .imagem:hover {
@@ -180,47 +188,37 @@ section {
 .text-wrapper {
     flex: 2;
     color: var(--text-color);
-    max-width: 600px; /* Limita a largura máxima do texto */
-    
+    max-width: 800px;
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
 }
 
 .text-wrapper h3 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     color: var(--accent-color);
-    margin-bottom: 2rem;
-   
+    margin-bottom: 1rem;
 }
 
 .text-wrapper p {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
     line-height: 1.8;
     color: #ddd;
-}
-
-
-.imagem:hover {
-    transform: scale(1.05);
-}
-
-#about h3, #about p {
-    text-align: left;
-    max-width: 700px;
-    margin: 0 auto;
-    color: #ddd;
+    text-align: justify;
+    hyphens: auto;
 }
 
 /* Cartões */
-.skill-card{
- background: var(--card-bg);
+.skill-card {
+    background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
-
-
 }
 
 .project-card {
@@ -228,9 +226,11 @@ section {
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    width: 300px;
+    width: 100%;
+    max-width: 350px;
     box-shadow: 0 4px 8px var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 auto;
 }
 
 .skill-card:hover, .project-card:hover {
@@ -240,13 +240,17 @@ section {
 
 .skill-card img {
     width: 80px;
+    height: 80px;
+    object-fit: contain;
     margin-bottom: 1rem;
 }
 
 .project-card img {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     margin-bottom: 1rem;
-    
+    border-radius: 5px;
 }
 
 .projects-container, .skills-container {
@@ -254,18 +258,27 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    padding: 1rem;
 }
 
 /* Contato */
 .contact-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 2rem;
 }
 
+.contact-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .contact-container img {
     width: 50px;
+    height: 50px;
     transition: transform 0.3s;
 }
 
@@ -283,89 +296,82 @@ footer {
     border-top: 1px solid #333;
 }
 
-/* --- Responsividade para telas menores que 600px --- */
-@media (max-width: 600px) {
-
-    /* Textos principais */
-    h1 {
-        font-size: 2.5rem; /* Reduz o tamanho do título */
+/* Media Queries para diferentes tamanhos de tela */
+@media (max-width: 768px) {
+    .overlay h1 {
+        font-size: 2.5rem;
     }
-
-    h2, h3 {
-        font-size: 1.8rem;
+    
+    .overlay p {
+        font-size: 1.2rem;
     }
-
-    p {
-        font-size: 1rem; /* Parágrafos um pouco menores */
-    }
-
-    /* Parallax ajusta altura */
-    .parallax, .parallax1 {
-        height: 60vh; /* Menor altura para caber melhor */
-        background-attachment: scroll; /* Em mobile 'fixed' dá bug, melhor scroll */
-    }
-
-    /* Navegação */
+    
     nav ul {
-        flex-direction: column; /* Coloca o menu empilhado */
-        gap: 1rem; /* Menor espaço */
+        gap: 0.8rem;
     }
-
-    nav a {
-        font-size: 1rem;
+    
+    section {
+        padding: 2rem 1rem;
     }
-
-    /* Sobre - Seção About */
-    #about .about-container {
-        flex-direction: column; /* Empilha a imagem e o texto */
-        gap: 2rem;
+    
+    .text-wrapper p {
+        text-align: left;
     }
-
-    .image-wrapper {
-        max-width: 200px; /* Imagem menor */
+    
+    .project-card {
+        padding: 1rem;
     }
-
-    .imagem {
-        width: 100%;
-        margin-right: 0;
+    
+    .contact-container {
+        gap: 1.5rem;
     }
+}
 
-    .text-wrapper {
-        max-width: 90%;
-        text-align: center;
-    }
-
-    .text-wrapper h3 {
+@media (max-width: 480px) {
+    .overlay h1 {
         font-size: 2rem;
     }
-
-    .text-wrapper p {
+    
+    .overlay p {
         font-size: 1rem;
     }
-
-    /* Cartões (skills e projetos) */
-    .skill-card, .project-card {
-        width: 100%;
-        max-width: 300px; /* Limita para não ficar estourando */
-    }
-
-    .project-card img {
-        width: 100%;
-    }
-
-    /* Contato */
-    .contact-container {
+    
+    nav ul {
         flex-direction: column;
-        align-items: center;
+        gap: 0.5rem;
     }
-
+    
+    .parallax, .parallax1 {
+        background-attachment: scroll;
+    }
+    
+    .skills-container {
+        gap: 1rem;
+    }
+    
+    .skill-card {
+        max-width: 120px;
+        padding: 1rem;
+    }
+    
+    .skill-card img {
+        width: 60px;
+        height: 60px;
+    }
+    
     .contact-container img {
         width: 40px;
+        height: 40px;
     }
+}
 
-    /* Rodapé */
-    footer {
-        font-size: 0.8rem;
+@media (min-width: 1200px) {
+    .about-container {
+        flex-direction: row;
     }
-
+    
+    .text-wrapper {
+        text-align: left;
+        padding-left: 3rem;
+    }
 }
