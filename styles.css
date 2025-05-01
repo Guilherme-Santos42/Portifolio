@@ -326,6 +326,20 @@ footer {
     .contact-container {
         gap: 1.5rem;
     }
+     #about .about-container {
+        flex-direction: column; /* Empilha em mobile */
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .image-wrapper {
+        flex: 0 0 auto; /* Remove a largura fixa em mobile */
+        max-width: 250px;
+    }
+    
+    .text-wrapper {
+        text-align: center; /* Centraliza o texto em mobile */
+    }
 }
 
 @media (max-width: 480px) {
