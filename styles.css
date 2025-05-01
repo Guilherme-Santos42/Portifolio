@@ -197,7 +197,7 @@ section {
 .text-wrapper h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(1.8rem, 4vw, 2.5rem);
-    color: var(--accent-color);
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -257,7 +257,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     padding: 1rem;
 }
 
