@@ -264,12 +264,13 @@ section {
      width: 300px;
     margin-bottom: 1rem;
 }
-.projects-container, .skills-container .x-container{
+.projects-container, .skills-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
 }
+
 
 /* Contato */
 .contact-container {
