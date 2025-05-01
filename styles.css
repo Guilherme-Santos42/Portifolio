@@ -64,15 +64,17 @@ h1, h2, h3 {
 
 .overlay {
     background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
+    width: auto; /* Mudamos de 100% para auto */
+    padding: 3rem 4rem; /* Aumentamos o padding */
+    border-radius: 8px; /* Opcional: bordas arredondadas */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    padding: 1rem;
+    margin: 0 1rem; /* Margem para não colar nas bordas em mobile */
+    max-width: 800px; /* Largura máxima do overlay */
 }
 
 .overlay1 {
@@ -158,7 +160,7 @@ section {
     flex-direction: row; /* Mantém os itens em linha */
     align-items: flex-start; /* Alinha no topo */
     justify-content: center;
-    gap: 4rem; /* Espaço entre imagem e texto */
+    gap: 3rem; /* Espaço entre imagem e texto */
     margin: 2rem auto;
     max-width: 1200px; /* Largura máxima do container */
     width: 90%; /* Largura relativa */
@@ -300,11 +302,12 @@ footer {
 /* Media Queries para diferentes tamanhos de tela */
 @media (max-width: 768px) {
     .overlay h1 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Ajuste opcional para mobile */
+        line-height: 1.3;
     }
     
     .overlay p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     nav ul {
@@ -339,6 +342,11 @@ footer {
     
     .text-wrapper {
         text-align: center; /* Centraliza o texto em mobile */
+    }
+    .overlay {
+        padding: 2rem; /* Reduz o padding em mobile */
+        width: 90%; /* Ocupa mais largura */
+        margin: 0 auto; /* Centraliza */
     }
 }
 
@@ -377,6 +385,9 @@ footer {
     .contact-container img {
         width: 40px;
         height: 40px;
+    }
+     .overlay {
+        padding: 1.5rem;
     }
 }
 
