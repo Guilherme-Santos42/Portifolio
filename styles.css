@@ -63,18 +63,25 @@ h1, h2, h3 {
 }
 
 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Ocupa todo o espaço do parallax */
     background: rgba(0, 0, 0, 0.6);
-    width: auto; /* Mudamos de 100% para auto */
-    padding: 3rem 4rem; /* Aumentamos o padding */
-    border-radius: 8px; /* Opcional: bordas arredondadas */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    margin: 0 1rem; /* Margem para não colar nas bordas em mobile */
-    max-width: 800px; /* Largura máxima do overlay */
+    padding: 0; /* Removemos o padding interno */
+}
+
+.overlay-content {
+    max-width: 800px;
+    padding: 2rem;
+    width: 90%;
 }
 
 .overlay1 {
