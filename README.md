@@ -2,6 +2,4 @@
 Seja bem-vindo(a)!
 https://guilherme-santos42.github.io/Portifolio/
 
-<img src="https://github.com/user-attachments/assets/30cf5711-965a-4ea4-acfd-5fa2b9acd676">
-
-<img src="https://github.com/user-attachments/assets/d58b4703-e395-45c4-9e72-5517d25dbb93">
+<img src="https://github.com/user-attachments/assets/75eb9e72-8f18-4aeb-8101-fc59c21c79f6">
