@@ -98,7 +98,7 @@ h1, h2, h3 {
 }
 
 .overlay h1, .overlay p {
-    font-family: 'Bebas Neue', sans-serif;
+    
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0.5rem 0;
@@ -409,5 +409,6 @@ footer {
         padding-left: 3rem;
     }
 }
+
 
 
