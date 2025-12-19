@@ -22,6 +22,15 @@ h1, h2, h3 {
     margin-bottom: 1rem;
 }
 
+.text-wrapper p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300; /* Deixa o texto mais elegante */
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.8;
+    color: #cbd5e1; /* Cor levemente azulada/cinza para combinar com o fundo */
+    text-align: justify;
+}
+
 /* Cabeçalho com Parallax */
 .parallax {
     background-image: url('https://github.com/user-attachments/assets/8f57127c-7e94-4670-82a1-4709300f5224');
@@ -400,3 +409,4 @@ footer {
         padding-left: 3rem;
     }
 }
+
